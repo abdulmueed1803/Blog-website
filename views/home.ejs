@@ -1,0 +1,17 @@
+<%- include("./partials/header") -%>
+<main class="item main">
+    <h1>Home</h1>
+    <p><%= homeStartingContent %></p>
+
+
+    <% blogPosts.forEach(function(component){ %>
+    <div class="main-item">
+        <h1> <%= component.title %> </h1>
+        <p> <%= component.content.substring(0,100)+'...' %> <a href="/posts/<%= component._id %>">Read More</a></p>
+    </div>
+    
+<% }) %>
+</main>
+
+
+<%- include("./partials/footer") -%>
